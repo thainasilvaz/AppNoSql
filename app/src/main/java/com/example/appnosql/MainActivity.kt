@@ -55,7 +55,7 @@ import com.example.appnosql.db.DBHandler
 import com.example.appnosql.ui.theme.AppNoSqlTheme
 import java.util.Calendar
 
-class MainActivity : ComponentActivity() {
+class MainActivity : ComponentActivity() { //ComponentActivity é uma classe base para atividades Android que suportam o uso de Jetpack Compose
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -64,7 +64,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class) //recursos experimentais da biblioteca Material3
 @Composable
 fun App(){
 
@@ -82,7 +82,7 @@ fun App(){
         verticalArrangement = Arrangement.Center
     ) {
         Text(text = "SQlite Database in Android")
-        OutlinedTextField(
+        OutlinedTextField( //caixa onde o usuário digitará as informações solicitadas
             value = coursename,
             onValueChange = { coursename = it },
             label = { Text("Enter your course name") },
@@ -109,7 +109,7 @@ fun App(){
                 .padding(bottom = 16.dp)
         )
 
-        OutlinedTextField(
+        OutlinedTextField( 
             value = coursedescription,
             onValueChange = { coursedescription = it },
             label = { Text("Enter your course description") },
@@ -118,7 +118,7 @@ fun App(){
                 .padding(bottom = 16.dp)
         )
 
-        Row(
+        Row( //layout que organiza os botões horizontalmente (em linha)
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(8.dp),
